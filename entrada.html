@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GhostRaveen</title>
+	<style>
+		* {
+		
+			margin: 0px;
+			
+			padding: 0px;
+			
+		}
+		
+		body {
+		
+			background-color: #FFF5DB;
+			
+			animation: background 0.5s ease-out 500ms forwards, background-delay 0s ease-out 2s forwards;
+			
+			display: flex;
+			
+			overflow: hidden;
+			
+		}
+
+		@keyframes background {
+		
+			0% {background-color: #FFF5DB;}
+			
+			100% {background-color: #F7E5D8;}
+			
+		}
+		
+		@keyframes background-delay {
+		
+			0% {background-color: #F7E5D8;}
+			
+			100% {background-color: #6C5B7B;}
+			
+		}
+		
+		
+		
+		.div {
+		
+			width: 50%;
+			
+			height: 100vh;
+			
+			opacity: 0;
+
+			background-color: #fff;
+
+			position: relative;
+
+			animation-duration: 4s;
+
+			animation-delay: 2s;
+
+			display: inline-block;
+
+			overflow: hidden;
+
+			margin: auto;
+			
+			z-index: 0;
+			
+		}
+		
+		#div1 {
+
+			animation-name: esquerdo;
+
+		}
+		
+		#div2 {
+
+			animation-name: direito;
+
+		}
+		
+		@keyframes esquerdo {
+
+			0% {background-color:#F7E5D8; opacity: 100%; right:0px; top:0px;}
+
+			55% {background-color:#F7E5D8; right:50%; top:0px;}
+
+		}
+		
+		@keyframes direito {
+
+			0% {background-color:#F7E5D8; opacity: 100%; left:0px; top:0px;}
+
+			55% {background-color:#F7E5D8; left:50%; top:0px;}
+
+		}
+		
+		.image {
+
+			width: 130px;
+
+			height: 112.5px;
+
+			background-size: contain;
+		
+			position: absolute;
+
+			top: 50%;
+
+			left: 50%;
+			
+			transform: translate(-50%, -50%);
+			
+			opacity: 0;
+			
+			clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+			
+		}
+		
+		#img1 {
+		
+			background-image: url('img/raven-roxo.png');
+			
+			background-position: center;
+			
+			animation: aparecer-black 1s 1s forwards, disappear 5s forwards 2s;
+			
+			z-index: 1;
+			
+		}
+		
+		#img2 {
+
+			background-image: url('img/raven-white.png');
+			
+			background-position: center;
+			
+			animation: aparecer-white 1s 2s forwards, disappear 20s forwards 10s, corvo 8s 4s;
+			
+			z-index: 1;
+			
+		}		
+
+		@keyframes aparecer-black {
+		
+			to {opacity: 1;}
+			
+		}
+		
+		@keyframes aparecer-white {
+		
+			to {opacity: 1;}
+			
+		}
+		
+		@keyframes disappear {
+		
+			to {opacity: 0;}
+			
+		}
+		
+		@keyframes corvo {
+		
+			0% {width:13vh;}
+			
+			12.5%{width:12vh;}
+			
+			25%{width:13vh;}
+			
+			37.5% {width:12vh;}
+			
+			50%{width:13vh;}
+			
+			62.5%{width:12vh;}
+			
+			75%{width:13vh;}
+			
+			87.5%{width:12vh;}
+			
+			100%{width:13vh;}
+			
+			
+		}
+		
+		.container {
+			display: flex;
+			flex-wrap: nowrap;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		  }
+
+		.half-image {
+
+			background-repeat: no-repeat;
+			background-position: center;
+			flex: 1;
+			height: 100
+		}
+		
+		
+	</style>
+
+</head>
+
+<body>
+
+	<div class="div" id="div1"></div>
+	
+	<div class="div" id="div2"></div>
+	
+	<div class="container">
+		<div class="half-image image" id="img1"></div>
+		<div class="half-image image" id="img2"></div>
+	</div>
+	
+	<script>
+	  function redirect() {
+		window.location.href = 'pag/blog.html';
+	  }
+	  setTimeout(redirect, 10000);
+	</script>
+
+</body>
+</html>

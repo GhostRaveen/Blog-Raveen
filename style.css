@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+	font-family: Arial;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: black;
+}
+
+h1 {
+	background-color: red;
+	padding: 10px;
+	margin: 30px 400px 200px 400px;
+	text-align: center;
+}
+
+h2 {
+	background-color: gray;
+	padding: 10px;
+	margin: 30px 400px;
+	text-align: center;
+	transition: 1s;
+}
+
+h2:hover {
+	background-color: lightgray;
+	transition: 0.5s;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}

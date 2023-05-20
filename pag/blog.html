@@ -4,12 +4,69 @@
 	<title>Blog Pessoal</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../style/style.css">
 	<script src="menu.js"></script>
+	<style>
+		.video-container {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: #fff;
+		}
+		
+		.button {
+		display: inline-block;
+		padding: 10px 20px;
+		border-radius: 4px;
+		background-color: rgba(255, 255, 255, 0.1);
+		backdrop-filter: saturate(180%) blur(20px);
+		box-shadow: 0 8px 12px rgb(0 0 0 / 40%);
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		margin: 10px;
+		transition: background-color 0.3s ease;
+	}
+	
+	.button:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+		backdrop-filter: saturate(180%) blur(0px);
+		color: black;
+	}
+
+	</style>
 </head>
 <body>
-	<h1>GhostRaveen</h1>
-	<a href="dev/programacao.html">Programação</a>
-	<a href="dev/diario">Meu diário</a>
+
+	<div class="video-container">
+		<video autoplay muted loop>
+		  <source src="Xcho - Ты и Я (Official Audio).mp4" type="video/mp4">
+		</video>
+		<div class="content">
+			<a class="button" href="dev/programacao.html">Programação</a>
+			<a class="button" href="dev/diario">Meu diário</a>
+		</div>
+	  </div>	
 </body>
 </html>
+
+
+  
+
